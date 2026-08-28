@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이크레더블 신규입사자 가이드북</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230B2545'/%3E%3Cstop offset='1' stop-color='%232E63B8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-size='38' font-weight='800' fill='white' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div class="topnav">
+  <div class="brand">
+    <img class="logo" src="assets/images/logo.png" alt="이크레더블 로고">
+  </div>
+  <ul>
+    <li><a href="#welcome">환영 인사</a></li>
+    <li><a href="#intro">회사 소개</a></li>
+    <li><a href="#firstday">첫날 체크리스트</a></li>
+    <li><a href="#facility">시설안내</a></li>
+    <li><a href="#policy">제도안내</a></li>
+    <li><a href="#etc">기타안내</a></li>
+    <li><a href="#culture">일하는 방식</a></li>
+    <li><a href="#setup">환경설정</a></li>
+    <li><a href="#faq">FAQ / SOS</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#welcome">환영 인사</a>
+  <a href="#intro">회사 소개</a>
+  <a href="#firstday">첫날 체크리스트</a>
+  <a href="#facility">시설안내</a>
+  <a href="#policy">제도안내</a>
+  <a href="#etc">기타안내</a>
+  <a href="#culture">일하는 방식</a>
+  <a href="#setup">환경설정</a>
+  <a href="#faq">FAQ / SOS</a>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">ECREDIBLE ONBOARDING</span>
+    <h1>이크레더블 신규입사자 가이드북</h1>
+    <p class="sub">Presented by 인력개발팀</p>
+    <div class="tagline">Beyond the Credit, We Connect the Business</div>
+    <div class="scroll-cue">SCROLL</div>
+  </div>
+</div>
+
+<!-- 0. 회사 소개 -->
+<section id="welcome">
+  <div class="sec-head">
+    <span class="section-label">Welcome</span>
+    <h2 class="section-title">이크레더블에 오신 것을 환영합니다</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">오늘부터 이크레더블의 새로운 동료가 되신 것을 진심으로 축하합니다.</p>
+  </div>
+  <div class="welcome-card">
+    <div class="welcome-quote">Beyond the Credit, We Connect the business</div>
+    <p style="font-weight: bold;">이크레더블의 새로운 구성원이 되신 것을 환영합니다.</p>
+    <p>귀하께서 당사에 합류하여 주심에 대해 깊은 감사의 말씀을 전합니다. <br> 보유하신 뛰어난 역량과 열정이 이크레더블의 새로운 성장 동력이 될 것이라 확신하고 있습니다. <br> 회사 또한, 귀하께서 마음껏 역량을 펼치고 성장할 수 있도록 든든한 버팀목이 되겠습니다. <br>당사와 함께해 주심에 다시 한번 감사드리며, 이크레더블에서 보람차고 빛나는 미래를 함께 만들어 가기를 기대합니다.</p>
+    <p>이크레더블 드림</p>
+  </div>
+</section>
+
+<section id="intro">
+  <div class="sec-head">
+    <span class="section-label">Company</span>
+    <h2 class="section-title">회사 소개</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">지배구조 및 사업 영역, 복리후생 등을 소개합니다.</p>
+  </div>
+
+  <h3 class="sub-title">법인 관계도</h3>
+  <div class="org-chart">
+    <a class="org-node" href="https://www.hearst.com" target="_blank">HEARST<span class="en">Global Media Group</span></a>
+    <div class="org-connector"></div>
+    <a class="org-node" href="https://www.fitchratings.com" target="_blank">FitchRatings<span class="en">Global Credit Rating Agency</span></a>
+    <div class="org-connector"></div>
+    <a class="org-node" href="https://www.korearatings.com" target="_blank">한국기업평가<span class="en">Korea Ratings</span></a>
+    <div class="org-connector"></div>
+    <a class="org-node main" href="https://www.ecredible.co.kr" target="_blank">이크레더블<span class="en">ECREDIBLE</span></a>
+    <div class="org-connector"></div>
+    <a class="org-node" href="https://www.ecredible.co.kr" target="_blank">이크레더블네트웍스<span class="en">Ecredible Networks</span></a>
+  </div>
+
+  <h3 class="sub-title">사업 영역</h3>
+  <div class="biz-tabs" id="bizTabs">
+    <div class="biz-tab active" data-cat="all">전체</div>
+    <div class="biz-tab" data-cat="rating">평가</div>
+    <div class="biz-tab" data-cat="consulting">컨설팅</div>
+    <div class="biz-tab" data-cat="monitoring">모니터링·조회</div>
+  </div>
+  <div class="biz-grid" id="bizGrid">
+    <div class="biz-card" data-cat="rating">
+      <span class="biz-cat">평가</span><h4>민간기업 거래용 신용평가</h4>
+      <div class="biz-desc">기업 간 거래에서 상대 기업의 신용도를 평가하여 거래 위험을 낮추는 핵심 서비스입니다.</div>
+    </div>
+    <div class="biz-card" data-cat="rating">
+      <span class="biz-cat">평가</span><h4>공공기관 입찰용 신용평가</h4>
+      <div class="biz-desc">공공 조달 입찰 참여 기업의 신용도를 평가하여 공정한 입찰 환경을 지원합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="rating">
+      <span class="biz-cat">평가</span><h4>ESG 평가</h4>
+      <div class="biz-desc">환경·사회·지배구조 관점에서 기업의 비재무적 가치를 평가합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="rating">
+      <span class="biz-cat">평가</span><h4>안전보건 평가</h4>
+      <div class="biz-desc">기업의 산업안전·보건 관리 수준을 진단하고 등급화합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="rating">
+      <span class="biz-cat">평가</span><h4>기술특례상장평가</h4>
+      <div class="biz-desc">기술 특례 상장을 준비하는 기업의 기술력과 사업성을 평가합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="rating">
+      <span class="biz-cat">평가</span><h4>기술가치·지식재산평가</h4>
+      <div class="biz-desc">기술과 지식재산의 경제적 가치를 정량적으로 산정합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="rating">
+      <span class="biz-cat">평가</span><h4>기술신용등급(TCB)평가</h4>
+      <div class="biz-desc">재무정보와 기술력을 종합해 기업의 기술신용등급을 산출합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="rating">
+      <span class="biz-cat">평가</span><h4>투자용 기술평가</h4>
+      <div class="biz-desc">투자 의사결정을 지원하기 위한 기술 가치 평가 서비스입니다.</div>
+    </div>
+    <div class="biz-card" data-cat="consulting">
+      <span class="biz-cat">컨설팅</span><h4>현금흐름등급 컨설팅</h4>
+      <div class="biz-desc">기업의 현금흐름 등급 개선을 위한 맞춤형 컨설팅을 제공합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="consulting">
+      <span class="biz-cat">컨설팅</span><h4>ESG 컨설팅</h4>
+      <div class="biz-desc">ESG 등급 향상을 위한 전략 수립과 실행을 지원합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="consulting">
+      <span class="biz-cat">컨설팅</span><h4>안전보건 컨설팅</h4>
+      <div class="biz-desc">안전보건 관리체계 구축과 개선을 위한 컨설팅입니다.</div>
+    </div>
+    <div class="biz-card" data-cat="consulting">
+      <span class="biz-cat">컨설팅</span><h4>기술특례상장 컨설팅</h4>
+      <div class="biz-desc">기술특례상장 준비 기업을 위한 전략 컨설팅을 제공합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="monitoring">
+      <span class="biz-cat">모니터링·조회</span><h4>거래처 리스크 모니터링</h4>
+      <div class="biz-desc">거래처의 신용 리스크 변화를 상시 모니터링합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="monitoring">
+      <span class="biz-cat">모니터링·조회</span><h4>AI 모니터링 등급 조회</h4>
+      <div class="biz-desc">AI 기반으로 산출된 기업 등급을 실시간으로 조회합니다.</div>
+    </div>
+    <div class="biz-card" data-cat="monitoring">
+      <span class="biz-cat">모니터링·조회</span><h4>비재무 활동성 정보 조회</h4>
+      <div class="biz-desc">재무제표 외의 비재무적 활동 정보를 조회할 수 있습니다.</div>
+    </div>
+    <div class="biz-card" data-cat="monitoring">
+      <span class="biz-cat">모니터링·조회</span><h4>기업평가 정보 조회</h4>
+      <div class="biz-desc">이크레더블이 산출한 다양한 기업평가 정보를 조회합니다.</div>
+    </div>
+  </div>
+
+  <h3 class="sub-title">We are Team Ecredible : 복리후생 한눈에 보기</h3>
+  <div class="welfare-list">
+    <div class="welfare-row"><span class="welfare-tag financial">Financial</span><p>복지포인트 연 432만원 · 경영성과 확정 인센티브 · 하계 휴가비 50만원 · 우수사원 포상</p></div>
+    <div class="welfare-row"><span class="welfare-tag refresh">Refresh</span><p>특별휴가 7일(법정연차 외) · 매주 금요일 1시간 조기퇴근 · 법인 콘도 제휴</p></div>
+    <div class="welfare-row"><span class="welfare-tag family">Family</span><p>매년 효도휴가 제공 · Family Day 3시간 조기퇴근(월1회) · 주택·생활안정자금 대출 · 이사휴가·가족 경조사 지원 · 시차출퇴근제 운영</p></div>
+    <div class="welfare-row"><span class="welfare-tag health">Health</span><p>직원 건강검진 실시 · 독감 예방접종 지원</p></div>
+    <div class="welfare-row"><span class="welfare-tag growth">Growth</span><p>외부 교육 및 연수 지원 · 온라인연수원 지원 · 사내 동호회 지원</p></div>
+    <div class="welfare-row"><p>※ 상기 복리후생 중 휴가 및 복지포인트는 입사일자·경력입사 여부 등에 따라 상이하게 적용될 수 있습니다.(FAQ 참조)</p></div>
+  </div>
+
+  <h3 class="sub-title">오시는 길</h3>
+  <div class="loc-block">
+    <h4>본사</h4>
+    <p class="addr">(08380) 서울특별시 구로구 디지털로33길 27 (구로동, 삼성IT밸리 8층)</p>
+    <div class="map-frame">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EB%94%94%EC%A7%80%ED%84%B8%EB%A1%9C33%EA%B8%B8%2027%20%EC%82%BC%EC%84%B1IT%EB%B0%B8%EB%A6%AC&z=17&hl=ko&output=embed"></iframe>
+    </div>
+    <div class="map-fallback-link">
+      <a href="https://map.kakao.com/link/search/서울특별시 구로구 디지털로33길 27" target="_blank" rel="noopener">📍 카카오맵에서 보기 · 본사(삼성IT밸리)</a>
+    </div>
+  </div>
+  <div class="loc-block">
+    <h4>전북·전남·광주 지사</h4>
+    <p class="addr">(61963) 광주광역시 서구 상무중앙로 78번길 5-6 영효빌딩 9층(9807호)</p>
+    <div class="map-frame">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%84%9C%EA%B5%AC%20%EC%83%81%EB%AC%B4%EC%A4%91%EC%95%99%EB%A1%9C%2078%EB%B2%88%EA%B8%B8%205-6%20%EC%98%81%ED%9A%A8%EB%B9%8C%EB%94%A9&z=17&hl=ko&output=embed"></iframe>
+    </div>
+    <div class="map-fallback-link">
+      <a href="https://map.kakao.com/link/search/광주광역시 서구 상무중앙로 78번길 5-6" target="_blank" rel="noopener">📍 카카오맵에서 보기 · 광주 지사(영효빌딩)</a>
+    </div>
+  </div>
+  <div class="loc-block">
+    <h4>부산·영남 지사</h4>
+    <p class="addr">(47254) 부산광역시 부산진구 서전로8 (위워크5층, 102호)</p>
+    <div class="map-frame">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%20%EC%84%9C%EC%A0%84%EB%A1%9C8&z=17&hl=ko&output=embed"></iframe>
+    </div>
+    <div class="map-fallback-link">
+      <a href="https://map.kakao.com/link/search/부산광역시 부산진구 서전로8" target="_blank" rel="noopener">📍 카카오맵에서 보기 · 부산 지사(위워크)</a>
+    </div>
+  </div>
+
+  <h3 class="sub-title">대표 연락처</h3>
+  <div class="contact-strip">
+    <div class="item"><b>기업신용 &amp; ESG평가 문의</b>02-2101-9100</div>
+    <div class="item"><b>기술금융(TCB) 문의</b>02-2101-9200</div>
+    <div class="item"><b>홈페이지</b><a href="https://www.ecredible.co.kr" target="_blank">www.ecredible.co.kr</a></div>
+  </div>
+</section>
+
+<section id="firstday">
+  <div class="sec-head">
+    <span class="section-label">Day 1</span>
+    <h2 class="section-title">첫날 체크리스트</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">입사 첫날에는 아래와 같이 안내드립니다.</p>
+  </div>
+  <div class="checklist">
+    <div class="check-card">
+      <span class="num">STEP 1</span>
+      <h3>근로계약서·서약서·동의서 작성</h3>
+      <ul>
+        <li>인력개발팀 안내에 따라 근로계약서·서약서·동의서 작성합니다.</li>
+        <li>서명 이전 계약 내용을 꼼꼼히 확인합니다.</li>
+        <li>궁금한 사항은 언제든지 담당자에게 질문합니다.</li>
+        <li>담당 : <span class="placeholder">인력개발팀 4683</span></li>
+      </ul>
+    </div>
+    <div class="check-card">
+      <span class="num">STEP 2</span>
+      <h3>출입 등록 (안면인식)</h3>
+      <ul>
+        <li>본사 사무실은 CAPS 안면인식 시스템으로 출입을 관리하고 있습니다.</li>
+        <li>담당 : <span class="placeholder">인력개발팀 4685</span></li>
+        <li>CAPS 출입등록 단말기는 특정 PC에만 설치되어 있어, 담당자 부재 시 진행이 불가하오니 사전에 담당자에게 연락하시기 바랍니다.</li>
+        <br>
+        <li class="no-bullet" style="font-weight: bold;">CAPS 안면인식 등록절차</li>
+          <hr>
+        <li class="no-bullet">① 담당자에게 현재 출입등록이 가능한지 확인합니다.</li>
+        <li class="no-bullet">② 3·5·8·10층의 출입문에서 담당자 내선으로 연락합니다.</li>
+        <li class="no-bullet">③ 유선 안내를 받아 등록을 진행하고, 정상 등록 여부를 확인합니다.</li>
+    </div>
+    <div class="check-card">
+      <span class="num">STEP 3</span>
+      <h3>초기 인수물품 확인</h3>
+      <ul>
+        <li>일반비품(사무용품, 다이어리 등)을 수령하고 물리적 업무환경(사무용 의자 등)의 이상여부를 확인합니다.</li>
+        <li>IT인프라(전산장비, 소프트웨어, 계정 등) 이상 여부를 확인합니다.</li>
+        <li>일반비품 관련 문의 : <span class="placeholder">인력개발팀 4685</span></li>
+        <li>IT인프라 관련 문의 : <span class="placeholder">인프라보안팀 4637</span></li>
+        <li class="no-bullet">※ 입사 시기에 따라 전산장비 모델은 상이할 수 있습니다.</li>
+      </ul>
+    </div>
+    <div class="check-card">
+      <span class="num">STEP 4</span>
+      <h3>동료 인사 및 사규 확인</h3>
+      <ul>
+        <li>함께 일할 될 동료분들과 인사를 나누어주세요.</li>
+        <li>그룹웨어 게시판에서 주요 공지사항 및 이크레더블 사규 등을 확인하여 최근 공지사항을 숙지하고 규정을 파악하는 것을 권장드립니다.</li>
+        <li>이크레더블 구성원은 서로를 존중하는 문화를 위해 함께 노력하고 있습니다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="facility">
+  <div class="sec-head">
+    <span class="section-label">Facility</span>
+    <h2 class="section-title">사내 시설 및 지사 안내</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">본사 각 층별 배치와 지방 사무소 위치를 안내합니다.</p>
+  </div>
+
+  <h3 class="sub-title">본사 8층 (임원실·사업본부·지원본부 등)</h3>
+  <table class="plain">
+    <tr><th>임원실</th><th>노동조합</th><th>기업사업본부</th><th>공공금융본부</th><th>경영지원본부</th><th>재무관리실</th><th>준법감시실</th><th>사업추진실</th><th>세미나실·휴게실·회의실</th></tr>
+  </table>
+  <div class="floor-plan-box floor-plan-filled">
+  <img src="assets/images/floorplan-8f.svg" alt="본사 8층 평면도">
+</div>
+
+  <h3 class="sub-title">본사 5층 (ESG본부)</h3>
+  <table class="plain">
+    <tr><th>ESG본부</th><th>임원실</th><th>휴게실·회의실</th><th>기사대기실(의전)</th></tr>
+  </table>
+  <div class="floor-plan-box floor-plan-filled">
+  <img src="assets/images/floorplan-5f.svg" alt="본사 5층 평면도">
+</div>
+
+  <h3 class="sub-title">본사 3층 (기업평가본부·기술가치평가본부)</h3>
+  <table class="plain">
+    <tr><th>기업평가본부</th><th>기술가치평가본부</th><th>임원실</th><th>휴게실·회의실</th></tr>
+  </table>
+  <div class="floor-plan-box floor-plan-filled">
+  <img src="assets/images/floorplan-3f.svg" alt="본사 3층 평면도">
+</div>
+
+  <h3 class="sub-title">본사 10층 (IT전략실 등)</h3>
+  <table class="plain">
+    <tr><th>IT전략실</th><th>DX운영팀</th><th>DX개발팀</th><th>외주협력업체</th><th>회의실</th></tr>
+  </table>
+</div>
+
+
+  <h3 class="sub-title">지사 안내</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>부산 지사</h4>
+      <p style="font-size:14px;">부산광역시 부산진구 서전로 8 위워크 5층</p>
+    </div>
+    <div class="card">
+      <h4>광주 지사</h4>
+      <p style="font-size:14px;">광주광역시 서구 상무중앙로 78번길 5-6 영효빌딩 9층</p>
+    </div>
+  </div>
+</section>
+
+<section id="policy">
+  <div class="sec-head">
+    <span class="section-label">Policy</span>
+    <h2 class="section-title">회사 제도 안내</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">직급 체계부터 평가, 복리후생, 노동조합까지 알아두어야 할 제도입니다.</p>
+  </div>
+
+  <h3 class="sub-title">직급 및 호칭</h3>
+  <div class="card">
+    <div class="rank-flow">
+      <div class="rank-step g5">G5<span class="en">매니저</span><span class="rank-tooltip">신입 ~ 만 3년의 인정경력</span></div>
+      <div class="rank-connector"></div>
+      <div class="rank-step g4">G4<span class="en">선임</span><span class="rank-tooltip">만 4년 ~ 만 8년의 인정경력</span></div>
+      <div class="rank-connector"></div>
+      <div class="rank-step g3">G3<span class="en">책임</span><span class="rank-tooltip">만 9년 ~ 만 14년의 인정경력</span></div>
+      <div class="rank-connector"></div>
+      <div class="rank-step g2">G2<span class="en">수석</span><span class="rank-tooltip">만 15년 ~ 만 20년의 인정경력</span></div>
+      <div class="rank-connector"></div>
+      <div class="rank-step g1">G1<span class="en">수석</span><span class="rank-tooltip">만 21년 이상의 인정경력</span></div>
+    </div>
+    <ul style="margin-top:14px;">
+      <li>2024년 노동조합과의 임금·단체협약에 따라 동일 직급구간 단일 임금제를 도입했습니다.</li>
+      <li>경력별 직급구간을 설정하여, 동일 구간의 임금은 경력과 무관하게 단일하게 책정됩니다.</li>
+      <li>노사 합의로 결정된 임금인상률은 매년 적용됩니다.</li>
+      <li>각 구간 승진심사는 매년 연말 인사위원회에서 결정됩니다.</li>
+      <li>일반적으로 직급이 호칭이 되며, 팀장 등 직책자는 직책이 호칭이 됩니다 (본부장, 팀장 등).</li>
+    </ul>
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:8px;">※ 제도 상세는 그룹웨어 사내규정에서 확인 가능합니다.</p>
+  </div>
+
+  <h3 class="sub-title">인사평가 제도 (타임라인)</h3>
+  <div class="card">
+    <div class="tl-head">
+      <p style="font-size:14px; margin-bottom:0;">인사평가는 <b>업적평가</b> 및 <b>역량평가</b>로 구성되며, 성과급 책정, 사내제도(PIP 등) 적용에 영향을 미칩니다.</p>
+      <button class="tl-more-btn" onclick="openTlModal('tl-perf','인사평가 제도 전체 보기')">전체 보기</button>
+    </div>
+    <div class="timeline-wrap"><div class="timeline" id="tl-perf">
+      <div class="tl-step"><span class="tl-num">01</span><div class="tl-label">연초 KPI설정</div></div>
+      <div class="tl-step"><span class="tl-num">02</span><div class="tl-label">업무수행<br>(중간면담)</div></div>
+      <div class="tl-step"><span class="tl-num">03</span><div class="tl-label">본인평가</div></div>
+      <div class="tl-step"><span class="tl-num">04</span><div class="tl-label">1차평가<br>(직상위자)</div></div>
+      <div class="tl-step"><span class="tl-num">05</span><div class="tl-label">2차평가<br>(차상위자)</div></div>
+      <div class="tl-step"><span class="tl-num">06</span><div class="tl-label">인사부서<br>확인</div></div>
+      <div class="tl-step"><span class="tl-num">07</span><div class="tl-label">평가결과<br>고지</div></div>
+      <div class="tl-step"><span class="tl-num">08</span><div class="tl-label">이의제기</div></div>
+      <div class="tl-step"><span class="tl-num">09</span><div class="tl-label">인사위원회</div></div>
+      <div class="tl-step"><span class="tl-num">10</span><div class="tl-label">등급확정·<br>성과급 지급</div></div>
+    </div></div>
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:8px;">※ 세부사항 : 그룹웨어 [게시판-사내규정-인사관계규정(2장)-2-05 근무평가요강]</p>
+  </div>
+
+  <h3 class="sub-title">복리후생</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>수습기간에도 적용</h4>
+      <ul>
+        <li>가족의 날 조기퇴근(EF)</li>
+        <li>사내동호회 활동비 지원</li>
+        <li>휴양시설 예약 지원</li>
+        <li>이사휴가 지원</li>
+        <li>하계 휴가비 지원(월할)</li>
+        <li>경조금 및 경조휴가 일부</li>
+        <li>매주 금요일 1시간 조기 퇴근</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>수습기간에는 미적용</h4>
+      <ul>
+        <li>경영성과급(인센티브) 지급</li>
+        <li>분기별 복지포인트 지급</li>
+        <li>가계안정자금 대여</li>
+        <li>경조금 및 경조휴가 일부</li>
+        <li>배우자 건강검진 지원(40세 이상)</li>
+        <li>특별휴가 및 효도휴가*</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:13px; color:var(--ink-soft); margin-top:10px;">※ 세부내역 : 그룹웨어 [게시판-사내규정-인사관계규정(2장)-2-09 복지후생요강시행세칙]</p>
+
+  <h3 class="sub-title">노동조합</h3>
+  <div class="card">
+    <p style="font-size:14px; margin-bottom:10px;">노동조합은 이크레더블 직원이라면 누구든 본인 의사에 따라 자유롭게 가입할 수 있습니다.</p>
+    <ul>
+      <li>전국사무금융서비스노동조합(민주노총) 소속입니다.</li>
+      <li>헌법상 보장된 노동3권을 기반으로 조합원 근로조건 개선과 노사 발전을 도모합니다.</li>
+      <li>임금·단체협약 교섭, 노사협의회, 타운홀 미팅 등 정기활동을 수행합니다.</li>
+    </ul>
+    <div class="access-box">
+      담당자 : <span class="placeholder">[노조위원장 김기동]</span><br>
+      연락처 : <span class="placeholder">[노동조합 4869]</span><br>
+      사무실 : 본사 8층, 8F-5 회의실 좌측(세미나실 우측)
+    </div>
+  </div>
+
+  <h3 class="sub-title">공지 및 규정 확인</h3>
+  <div class="card">
+    <div class="flow">
+      <div class="flow-step">메신저 숏컷 - 그룹웨어 접속</div>
+      <div class="flow-step">그룹웨어 - 게시판 접속</div>
+      <div class="flow-step">게시판 - 공지사항·사내규정 확인</div>
+    </div>
+    <p style="font-size:13px; color:var(--ink-soft);">※ 확인 항목 : 사내규정 전체, 주요 공지사항, 인사발령, 유의사항 등</p>
+    <div class="cred-box"><b>그룹웨어 계정</b> <span class="placeholder">[본인 사번]</span> &nbsp;/&nbsp; <b>암호</b> <span class="placeholder">[초기화면에서 확인 가능]</span></div>
+  </div>
+</section>
+
+<section id="etc">
+  <div class="sec-head">
+    <span class="section-label">Etc.</span>
+    <h2 class="section-title">기타 안내사항</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">초기 계정, 명함 신청, ECM 활용, 근태·설비·차량 이용 등 실무에 필요한 정보입니다.</p>
+  </div>
+
+  <h3 class="sub-title">초기 계정 안내</h3>
+  <div class="grid2">
+    <div class="card"><h4>그룹웨어 및 메신저</h4><ul><li>구축형 ERP&그룹웨어(Douzone OmniEsol)</li><li>계정 : 본인 사번</li><li>암호 : <span class="placeholder">[메신저 초기화면에서 확인 가능]</span></li></ul></div>
+    <div class="card"><h4>웹메일(외부망)</h4><ul><li>외부망 웹메일 : <a href="https://works.sirteam.net/" target="_blank">https://works.sirteam.net/</a></li><li>계정 : 본인 계정명</li><li>암호 : <span class="placeholder">[인프라보안팀 안내]</span></li></ul></div>
+    <div class="card"><h4>크로스넷</h4><ul><li>당사 이중망 환경에서 망간 자료 전송(망연계)을 지원하는 솔루션입니다.</li><li>계정 : 본인 계정명</li><li>암호 : <span class="placeholder">[인프라보안팀 안내]</span></li></ul></div>
+    <div class="card"><h4>PrintSecure</h4><ul><li>문서 출력 과정을 통제하고 사내 기밀 및 개인정보 유출을 방지하기 위한 보안 솔루션입니다.</li><li>계정 : 이메일 앞자리</li><li>암호 : <span class="placeholder">[인프라보안팀 안내]</span></li></ul></div>
+    <div class="card"><h4>Privacy-i</h4><ul><li>개인정보 및 중요문서 유출을 방지하기 위한 보안 솔루션입니다.</li><li>계정 : 본인 사번</li><li>암호 : <span class="placeholder">[인프라보안팀 안내]</span></li></ul></div>
+    <div class="card"><h4>ECM</h4><ul><li>기업 내부 문서 콘텐츠를 관리하는 시스템 저장 공간 솔루션입니다.</li><li>계정 : 본인 사번</li><li>암호 : <span class="placeholder">[인프라보안팀 안내]</span></li></ul></div>
+  </div>
+
+  <h3 class="sub-title">명함 신청</h3>
+  <div class="card">
+    <div class="flow">
+      <div class="flow-step">신청양식 기재<br>(공지사항 확인)</div>
+      <div class="flow-step">명함업체에 메일 신청<br>(관리자 메일 참조 필수)</div>
+      <div class="flow-step">시안확인 및 발급요청<br>(업체 메일 회신)</div>
+      <div class="flow-step">명함수령<br>명세서 인포데스크(8F) 전달</div>
+    </div>
+    <ul style="margin-top:10px;">
+      <li>업체(다큐몰) 수신 메일 : <span class="placeholder">[designdm@naver.com]</span></li>
+      <li>관리자 참조 메일 : <span class="placeholder">[hr@ecredible.co.kr]</span></li>
+      <li>명함 명세서 전달 : <span class="placeholder">[인포데스크(8F) 전달]</span></li>
+      <li>신청양식 : 그룹웨어 [게시판-공지사항-286번 명함신청안내(update)_'25 02]</li>
+      <li>발급 소요 2~3일(지방 배송 시 추가 소요), 기본 1통(200매), 최대 5통</li>
+      <li class="no-bullet">※ 기재정보 오류로 인한 재발급은 본인 비용 부담입니다.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title">ECM 이용</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>파일 저장 및 편집</h4>
+      <ul>
+        <li>내부망에서는 ECM 드라이브 또는 보안 드라이브에만 파일 저장·편집이 가능합니다.</li>
+        <li>외부망에서는 원칙적으로 파일의 저장만 가능하며, 문서의 편집 등은 불가능합니다.</li>
+        <li>ECM 관련 문의 : <span class="placeholder">[인프라보안팀 보안담당자 4633]</span></li>
+        <li class="no-bullet">※ 내부망 예외(일반 드라이브 저장) : 외부망 반입 파일, 외부망 반출 허가 파일, 프린트 스캔본 등</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="tl-head">
+        <h4 style="margin-bottom:0;">외부망 반출 타임라인</h4>
+        <button class="tl-more-btn" onclick="openTlModal('tl-export','외부망 반출 절차 전체 보기')">전체 보기</button>
+      </div>
+      <div class="timeline-wrap"><div class="timeline" id="tl-export">
+        <div class="tl-step"><span class="tl-num">01</span><div class="tl-label">파일 우클릭<br>-외부반출요청</div></div>
+        <div class="tl-step"><span class="tl-num">02</span><div class="tl-label">개인정보<br>상태 확인</div></div>
+        <div class="tl-step"><span class="tl-num">03</span><div class="tl-label">요청내용<br>작성</div></div>
+        <div class="tl-step"><span class="tl-num">04</span><div class="tl-label">신청완료</div></div>
+        <div class="tl-step"><span class="tl-num">05</span><div class="tl-label">관리자 승인·<br>다운로드</div></div>
+      </div></div>
+      <p style="font-size:13px; color:var(--ink-soft);">※ 개인정보 필터링 완료 파일에 대하여만 반출 신청 가능</p>
+    </div>
+    <div class="card">
+      <h4>업무망 내부 배포</h4>
+      <ul>
+        <li>파일 우클릭 → [내부 배포용 URL 복사]</li>
+        <li>메신저·쪽지 등에 붙여넣기(Ctrl+V)</li>
+        <li class="no-bullet">※ [속성-보안]에서 접근권한을 설정한 인원에 한하여 파일 열람 가능</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>기안 첨부용 복사</h4>
+      <ul>
+        <li>파일 우클릭 → [속성-기본] → [내부 기안용 URL 복사]</li>
+        <li>기안 작성 후 내용에 붙여넣기(Ctrl+V)</li>
+        <li class="no-bullet">※ 결재선에 존재하는 관련자는 별도 권한 부여없이 열람 가능</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">근태관리 및 근태신청</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>출·퇴근 관리</h4>
+      <ul>
+        <li>출근 : 그룹웨어 메인화면 중앙 "출근" 클릭</li>
+        <li>퇴근 : 그룹웨어 메인화면 중앙 "퇴근" 클릭</li>
+        <li class="no-bullet">※ 출근 이후 자동으로 퇴근 버튼으로 전환되며, 퇴근 버튼은 중복 클릭하여 갱신할 수 있습니다.</li>
+        <li class="no-bullet">※ 부득이한 사유(천재지변 등)로 인한 출퇴근 미기록 시, [인사관리-대사우보고서-개인근태현황] 메뉴에서 조정신청 가능합니다.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>휴가 이용</h4>
+      <ul>
+        <li>[인사관리-대사우관리-개인신청관리-근태신청] - "휴가신청"</li>
+        <li>휴가종류 및 휴가기간을 설정하고 휴가 신청</li>
+        <li class="no-bullet">※ "휴가신청"의 [사유]란은 단순 기록을 위함이며, 회사에서는 임직원의 휴가 사유를 수집·검토하지 않습니다.</li>
+        <li class="no-bullet">※ 휴가 부여 일수, 휴가 부여 시점에 관련 문의는 아래 FAQ를 참조하여 주시고, 추가 질의는 인력개발팀 담당자에게 문의하시기 바랍니다.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>시간외근무신청</h4>
+      <ul>
+        <li>[인사관리-대사우관리-개인신청관리-근태신청] - "시간외근무신청"</li>
+        <li>"근무일" 선택 → 연장근무·휴일근무 자동 지정 → 시작/종료시간 및 사유 입력 → 결재 상신</li>
+        <li class="no-bullet">※ 시간외근무는 휴게시간(1시간)을 고려하여, 근무종료시간 +1시간부터 신청가능합니다.</li>
+        <li class="no-bullet">※ 시간외근무는 사전에 신청해야 하며, 신청한 시간 이내에서만 시간외근무 결과보고가 가능합니다.</li>
+        <li class="no-bullet">※ "시간외근무 결과보고"에는 증명할 수 있는 수행내역을 입력하여야 합니다.</li>
+        <li class="no-bullet">※ 신청 시에는 작성요령을 반드시 확인하여 주십시오.</li>
+        <li class="no-bullet">※ 시간외근무는 반드시 필요한 경우에만 신청하시기 바랍니다.</li>
+
+      </ul>
+    </div>
+    <div class="card">
+      <h4>외근·출장 신청</h4>
+      <ul>
+        <li>[인사관리-대사우관리-개인신청관리-근태신청] - "외근(출장)신청"</li>
+        <li>외근종류 선택 → 외근구분 선택 → 외근기간 선택 → 이동수단 기입</li>
+        <li>예정시간 및 업무 기입 → 결재 상신</li>
+        <li class="no-bullet">※ 교육 참석의 경우에도 외근으로 신청합니다.</li>
+        <li class="no-bullet">※ 외근 신청 시, 해당일자의 개인 근태는 "이상근태"로 기록됩니다. [인사관리-대사우보고서-개인근태현황] 메뉴에서 조정신청 가능합니다.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>시차출퇴근제 신청</h4>
+      <ul>
+        <li>[인사관리-대사우관리-개인신청관리-근태신청] - "시차근무신청"</li>
+        <li>근무시간유형 선택 → 신청근무일 선택(월요일 시작/일요일 종료) → 사유 기입 → 결재 상신</li>
+        <li class="no-bullet">※ 시차출퇴근제는 임직원 개인의 편의를 위해 운영되는 제도이며, 07시부터 30분 단위로 운영합니다.</li>
+        <li class="no-bullet">※ 반드시 신청 이전에 부서 내부 합의를 거쳐야 합니다.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>근태신청의 취소</h4>
+      <ul>
+        <li class="no-bullet" style="font-weight: bold;">CASE1. 근태기안이 결재된 경우</li>
+        <li>[인사관리-대사우관리-개인신청관리-근태신청] - "근태신청취소"</li>
+        <li>신청종류 및 신청서 선택 → 신청취소 결재 상신</li>
+        <li class="no-bullet" style="font-weight: bold;">CASE2. 근태기안이 결재되지 않은 경우</li>
+        <li>[전자결재-상신문서] - 해당기안 삭제</li>
+        <li>[전자결재-임시보관문서] - 해당기안 삭제 ]</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">설비·자산 이용</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>회의실 예약</h4>
+      <ul>
+        <li>[자원] 탭 접속 - 필요한 자원 확인(법인차량·회의실·일반비품)</li>
+        <li>제목·일시·설비 입력 후 등록</li>
+        <li>차량 이용 시 운행일지 작성 필수(위치 : <span class="placeholder">[담당팀 문의]</span>)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>차량 예약</h4>
+      <ul>
+        <li>[자원] 탭 접속 - 필요한 자원 확인(법인차량·회의실·일반비품)</li>
+        <li>제목·일시·설비 입력 후 등록</li>
+        <li>차량 이용 시 운행일지 작성 필수(위치 : <span class="placeholder">[담당팀 문의]</span>)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>자산·비품 대여</h4>
+      <div class="flow">
+        <div class="flow-step">대여 가능 여부 확인</br>(인력개발팀)</div>
+        <div class="flow-step">물품대여 관리대장 작성</br>(대장 및 그룹웨어-[자원])</div>
+        <div class="flow-step">수령·이용</div>
+        <div class="flow-step">반납·장부 기록</div>
+      </div>
+      <p style="font-size:13px; color:var(--ink-soft);">※ 대여가능 자산 : 빔프로젝터(스크린 포함)·포켓와이파이·공구 등</p>
+    </div>
+    <div class="card">
+      <h4>차량 예약</h4>
+      <ul>
+        <li>[자원] 탭 접속 - 필요한 자원 확인(법인차량·회의실·일반비품)</li>
+        <li>제목·일시·설비 입력 후 등록</li>
+        <li>차량 이용 시 운행일지 작성 필수(위치 : <span class="placeholder">[담당팀 문의]</span>)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">이동수단 지원 (쏘카 · 카카오T)</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>쏘카</h4>
+      <ul>
+        <li>사전 등록 신청 필수 : <span class="placeholder">[담당팀 문의]</span></li>
+        <li>등록 완료 후 기업 계정으로 이용</li>
+        <li>기본 서비스 외 부름/편도 서비스는 사용 불가</li>
+        <li>개인(형 법인)카드 결제 후 지출결의서 등록</li>
+        <li>삼성IT밸리 쏘카존 : 지하 2층 주차장</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>카카오T</h4>
+      <ul>
+        <li>입사 시 자동 등록(미등록 시 <span class="placeholder">[담당팀 문의]</span>에 요청)</li>
+        <li>카카오톡 초대 메시지 확인 후 인증</li>
+        <li>택시 그룹 선택 후 이용(외근/야근/국내출장/접대)</li>
+        <li>법인카드 자동 후불 결제 - 지출결의서 작성 불요</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">웹팩스 / 콘도 / 주차 / 비품</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>웹팩스</h4>
+      <ul>
+        <li>사전 등록 필수 : <span class="placeholder">[담당팀 문의]</span></li>
+        <li>희망 비밀번호 전달 후 계정·번호 부여(영업일 기준 1일 소요)</li>
+        <li>U+ 웹팩스 : https://webfax.uplus.co.kr/main</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>콘도</h4>
+      <ul>
+        <li>담당부서 공지 : <span class="placeholder">[담당팀 문의]</span></li>
+        <li>확인 후 예약, 카카오톡 알림톡으로 확인</li>
+        <li>소노리조트 : 예약 7일 전까지 사전 결제 필수</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>주차권</h4>
+      <ul>
+        <li>직원 차량 업무 이용 : 최대 2시간 30분 발급</li>
+        <li>외부 고객사 방문 : 주차한 시간만큼 발급</li>
+        <li>문의 : <span class="placeholder">[담당팀 문의]</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>코로나19 확진·증상 행동지침</h4>
+      <ul>
+        <li>의심증상 : 신속항원검사, 마스크 착용, 접촉 최소화</li>
+        <li>양성 확진 : 확인서 확보 후 귀가, <span class="placeholder">[담당팀 문의]</span>에 보고</li>
+        <li>격리 : 확진일 포함 5일, 재택근무 또는 연차소진</li>
+        <li>업무 복귀 : 복귀일 아침 자가검진, 이후 1주일 마스크 착용 권고</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="culture">
+  <div class="sec-head">
+    <span class="section-label">Culture &amp; Rule</span>
+    <h2 class="section-title">우리 조직의 일하는 방식</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">건강한 조직을 위해 아래 원칙을 함께 지켜주시기 바랍니다.</p>
+  </div>
+  <div class="culture-grid">
+    <div class="card">
+      <h4>협업</h4>
+      <ul>
+        <li>내가 작성한 문서나 작업물이 다음 담당자에게 넘어갈 때, 상대방이 추가 질문 없이 바로 일할 수 있도록 맥락과 가이드를 상세하게 포함하여 전달합니다.</li>
+        <li>조직 전체에 공유 문화가 흐를 수 있도록, 내가 가진 유용한 정보나 업무 팁을 독점하지 않고 팀에 적극적으로 전파합니다.</li>
+        <li>담당자가 애매모호한 영역은 부서장에게 분명하게 담당자를 배정받아 회색 지대(Grey Zone)를 메우되, 이 과정에서 소통에 오해가 없도록 합니다.</li>
+        <li>동료가 특정 의견을 낼 때는 그 직무·부서만의 고충이나 배경이 있음을 인지하고 상대방의 맥락을 이해하기 위해 노력합니다.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>존중</h4>
+      <ul>
+        <li>직급에 상관없이 상호 존중하는 언어(존칭, 존댓말)를 사용합니다.</li>
+        <li>아이디어나 업무 결과물에 대한 비판은 치열하게 하되, 그것이 비난으로 이어지지 않도록 철저히 분리합니다.</li>
+        <li>동료가 의견을 말할 때 중간에 말을 끊거나 팔짱을 끼는 등 부정적인 비언어적 태도를 취하지 않으며, 주의 깊게 경청합니다.</li>
+        <li>일상적인 고마움 표현을 통해 함께 일하는 동료들의 기여를 인정합니다.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>회의</h4>
+      <ul>
+        <li>회의실은 반드시 사전 예약하여 이용합니다.</li>
+        <li>회의는 목적과 안건을 사전에 공유하여 불필요한 시간 낭비를 줄입니다.</li>
+        <li>회의 내용 및 결과는 모든 이해관계자들에게 공유하여, 정보의 차이에서 오는 업무 효율 저하를 방지합니다.</li>
+        <li class="no-bullet">※ 동료의 회의실 이용, 고객사 방문 등을 고려하여 회의실에서의 취식은 지양합니다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="setup">
+  <div class="sec-head">
+    <span class="section-label">Setup</span>
+    <h2 class="section-title">환경설정 (전산·네트워크)</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">업무수행을 위해 당사에서 기본적으로 갖추어져 있어야 할 시스템 환경설정 안내입니다. </br>대부분 입사 시 완료되어 있으나, 재설정이 필요할 때 참고합니다.</p>
+  </div>
+
+  <h3 class="sub-title">이중망 환경 안내</h3>
+  <div class="card">
+    <p style="font-size:14px;">본사 네트워크는 전자금융감독규정에 의거하여 <b>내부망(업무망)</b>과 <b>외부망(인터넷망)</b>으로 구성되어 있습니다.<br>
+    두 망은 할당된 스위치(ATEN 또는 NEXI)를 통해 전환합니다.</p>
+    <div class="access-box">
+      <ul>
+        <li>ATEN 스위치 내·외부망 전환 : [Ctrl]+[Ctrl] 혹은 [Scroll Lock]+[Scroll Lock] (빠르게 2회)</li>
+        <li>NEXI 스위치 내·외부망 전환 : [Ctrl]+[Ctrl]+[1,2] 혹은 [KVM스위치 하드웨어 물리키]</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">IP 설정 절차</h3>
+  <div class="card">
+    <div class="flow">
+      <div class="flow-step">트레이 네트워크 우클릭 </br>→ 설정 열기</div>
+      <div class="flow-step">고급 네트워크 설정 </br>→ 어댑터 옵션 변경</div>
+      <div class="flow-step">이더넷 우클릭 </br>→ 속성</div>
+      <div class="flow-step">TCP/IPv4 속성</br>→ IP·DNS 입력</div>
+    </div>
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:6px;">※ IP·DNS 정보는 개인별로 상이하며 담당자가 할당합니다. <span class="placeholder">[인프라보안팀 문의]</span></p>
+  </div>
+
+
+  <h3 class="sub-title">원격근무 안내</h3>
+  <div class="card">
+    <p style="font-size:14px; margin-bottom:10px;"><b>가비아·리모트뷰 두 가지 방식으로 원격근무를 지원합니다.(기안 상신 필요)</b></p>
+    <ul>
+      <li>잦은 외근 등 업무 특성상 원격근무 계정이 필요한 직군의 경우, 원격근무 계정(가비아)을 상시 부여합니다.</li>
+      <li>재해 등으로 사무실 통근이 어려운 경우, 원격근무 계정(가비아/리모트뷰)을 임시 부여합니다.</li>
+      <li>원격근무 가이드라인은 [웹메일 - 웹폴더 - 공유폴더]에서 확인할 수 있습니다.</li>
+    </ul>
+    <div class="access-box">
+      <ul>
+        <li>원격근무 계정 할당 : <span class="placeholder">[인력개발팀 4681]</span></li>
+        <li>원격근무 계정 부여 및 관리 : <span class="placeholder">[인프라보안팀 4631]</span></li>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="sec-head">
+    <span class="section-label">FAQ &amp; SOS</span>
+    <h2 class="section-title">FAQ &amp; SOS 연락처</h2>
+    <div class="title-rule"></div>
+    <p class="section-desc">상황별로 연락할 담당 부서를 안내합니다.</p>
+  </div>
+  <div class="sos-grid">
+    <div class="sos-card">
+      <h3>PC 및 전산 장비 고장</h3>
+      <p>전산 장비 A/S는 담당 협력업체에 문의합니다.</p>
+      <p>네트워크·계정 문제는 인프라보안팀에 문의합니다.</p>
+      <p class="contact">문의처 : <span class="placeholder">[담당팀 문의]</span></p>
+    </div>
+    <div class="sos-card">
+      <h3>출입, 명함, 사무 비품 문의</h3>
+      <p>출입 등록, 명함 신청, 쏘카·카카오T·웹팩스·콘도 등록은 인력개발팀에 문의합니다.</p>
+      <p class="contact">담당자 : <span class="placeholder">[담당팀 문의]</span></p>
+    </div>
+    <div class="sos-card">
+      <h3>복리후생 및 인사제도 문의</h3>
+      <p>복리후생 세부 내용은 그룹웨어 사내규정에서 확인합니다.</p>
+      <p>추가 문의는 인력개발팀에 연락합니다.</p>
+      <p class="contact">담당자 : <span class="placeholder">[담당팀 문의]</span></p>
+    </div>
+    <div class="sos-card">
+      <h3>노동조합 관련 문의</h3>
+      <p>노동조합 가입 및 상담은 지부 담당자에게 문의합니다.</p>
+      <p class="contact">담당자 : <span class="placeholder">[담당팀 문의]</span></p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">자주 묻는 질문</h3>
+  <div class="faq-list" id="faqList">
+    <div class="faq-item">
+      <div class="faq-q">그룹웨어·메신저 비밀번호를 잊어버렸어요.</div>
+      <div class="faq-a">DX운영팀(<span class="placeholder">[담당팀 문의]</span>)에 문의하여 초기화를 요청합니다. 사번과 이름을 함께 안내해 주세요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">재택근무 시 크로스넷은 어떻게 설치하나요?</div>
+      <div class="faq-a">웹메일(<span class="placeholder">[담당팀 문의]</span>) - 웹폴더에서 "CrossNet-Agent-V4-이크레더블-인터넷망(공인IP).zip" 파일을 다운로드하여 설치합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">노트북이나 빔프로젝터를 대여하고 싶어요.</div>
+      <div class="faq-a">DX전략팀 또는 인력개발팀에 대여 가능 여부를 확인한 뒤, [물품대여 관리대장]을 작성하고 수령합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ECM에 저장한 파일을 외부로 반출하려면 어떻게 하나요?</div>
+      <div class="faq-a">파일 우클릭 - [외부 반출 요청] - 요청 내용 작성 - 개인정보 상태 확인 후 신청하면, 관리자 승인 후 크로스넷을 통해 외부망으로 수신됩니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">원격근무 계정은 어떻게 신청하나요?</div>
+      <div class="faq-a">인력개발팀(<span class="placeholder">[담당팀 문의]</span>)에 문의해 원격근무 계정(가비아)을 부여받고, 웹메일 웹폴더의 공유폴더에서 원격근무 가이드라인을 확인합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">이 항목에 없는 질문은 어디에 물어보나요?</div>
+      <div class="faq-a">사내 메신저 <span class="placeholder">[메신저 채널 입력]</span> 또는 그룹웨어 문의 게시판 <span class="placeholder">[게시판 링크 삽입]</span>을 이용해 주세요. FAQ는 계속 업데이트됩니다.</div>
+    </div>
+  </div>
+
+  <div class="faq-note">
+    이 FAQ 목록은 지속적으로 업데이트됩니다. 추가하고 싶은 질문이 있다면 인력개발팀으로 알려주세요.
+  </div>
+</section>
+
+
+
+<footer>
+  이크레더블 인력개발팀 &middot; 신규입사자 온보딩 가이드북<br>
+  본 페이지의 연락처 및 링크는 실제 정보로 지속 업데이트가 필요합니다. (외부 공개용 : 개인정보·시스템 접속정보는 모두 담당팀 문의로 대체되어 있습니다.)
+</footer>
+
+<button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<div class="tl-modal" id="tlModal">
+  <div class="tl-modal-box">
+    <button class="tl-modal-close" onclick="closeTlModal()">×</button>
+    <h4 id="tlModalTitle"></h4>
+    <div class="timeline" id="tlModalBody"></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
