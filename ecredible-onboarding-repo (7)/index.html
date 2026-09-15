@@ -7,6 +7,86 @@
 <link rel="icon" href="assets/images/favicon.png" type="image/png">
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* ===== 추가 기능 1 : 검색 ===== */
+  .site-search{
+    position:relative; margin-left:auto; margin-right:14px;
+  }
+  .site-search input{
+    width:180px; font-size:13px; padding:8px 14px 8px 34px; border-radius:20px;
+    border:1px solid var(--line, #E7EBF1); background:#F5F7FA url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%235C6773" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>') no-repeat 10px center / 14px 14px;
+    outline:none; transition:.2s; color:var(--ink,#1B2430);
+  }
+  .site-search input:focus{ width:230px; border-color:var(--blue,#2E63B8); background-color:#fff; }
+  .site-search-results{
+    position:absolute; top:calc(100% + 8px); right:0; width:320px; max-height:360px; overflow-y:auto;
+    background:#fff; border:1px solid var(--line,#E7EBF1); border-radius:14px; box-shadow:0 12px 30px rgba(16,24,40,.14);
+    display:none; z-index:400; padding:6px;
+  }
+  .site-search-results.open{ display:block; }
+  .site-search-results .ssr-empty{ padding:16px; font-size:13px; color:var(--ink-soft,#5C6773); text-align:center; }
+  .site-search-results .ssr-item{
+    display:block; padding:10px 12px; border-radius:10px; cursor:pointer; text-decoration:none;
+  }
+  .site-search-results .ssr-item:hover{ background:var(--blue-light,#EEF4FD); }
+  .site-search-results .ssr-item .ssr-sec{
+    display:inline-block; font-size:10.5px; font-weight:700; color:var(--blue,#2E63B8);
+    background:var(--blue-light,#EEF4FD); padding:2px 8px; border-radius:10px; margin-bottom:4px;
+  }
+  .site-search-results .ssr-item .ssr-title{ display:block; font-size:13.5px; font-weight:700; color:var(--navy,#0B2545); }
+  .site-search-results .ssr-item mark{ background:#FFE8A3; color:inherit; border-radius:2px; padding:0 1px; }
+  .search-flash{ animation:searchFlash 1.6s ease; }
+  @keyframes searchFlash{
+    0%{ box-shadow:0 0 0 4px rgba(46,99,184,.55); }
+    100%{ box-shadow:0 0 0 0 rgba(46,99,184,0); }
+  }
+  @media (max-width:980px){
+    .site-search{ display:none; }
+  }
+
+  /* ===== 추가 기능 2 : scrollspy 활성 메뉴 강조 ===== */
+  .topnav ul a.active{
+    color:#fff; background:var(--navy,#0B2545);
+  }
+  .mobile-menu a.active{
+    color:var(--blue,#2E63B8);
+  }
+
+  /* ===== 추가 기능 3 : 오늘 할 일 요약 위젯 ===== */
+  .today-widget{
+    max-width:1040px; margin:0 auto; padding:28px 24px 0;
+  }
+  .today-widget .tw-card{
+    background:linear-gradient(135deg,#fff, var(--blue-light,#EEF4FD));
+    border:1px solid var(--line,#E7EBF1); border-radius:18px; padding:22px 26px;
+    box-shadow:0 8px 24px rgba(16,24,40,.08);
+  }
+  .today-widget .tw-head{
+    display:flex; align-items:center; gap:8px; margin-bottom:14px;
+  }
+  .today-widget .tw-head .tw-badge{
+    font-size:11.5px; font-weight:800; color:#fff; background:var(--navy,#0B2545);
+    padding:4px 12px; border-radius:20px; letter-spacing:.03em;
+  }
+  .today-widget .tw-head h3{ font-size:16px; font-weight:800; color:var(--navy,#0B2545); }
+  .today-widget .tw-list{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+  }
+  @media (max-width:760px){
+    .today-widget .tw-list{ grid-template-columns:1fr; }
+  }
+  .today-widget .tw-item{
+    display:flex; align-items:flex-start; gap:10px; background:#fff; border:1px solid var(--line,#E7EBF1);
+    border-radius:12px; padding:14px 16px; text-decoration:none; transition:.18s;
+  }
+  .today-widget .tw-item:hover{ border-color:var(--blue,#2E63B8); transform:translateY(-2px); box-shadow:0 6px 16px rgba(16,24,40,.1); }
+  .today-widget .tw-num{
+    flex:0 0 auto; width:24px; height:24px; border-radius:50%; background:var(--blue,#2E63B8); color:#fff;
+    font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center;
+  }
+  .today-widget .tw-text{ font-size:13.5px; font-weight:700; color:var(--ink,#1B2430); line-height:1.5; }
+  .today-widget .tw-text small{ display:block; font-size:11.5px; font-weight:500; color:var(--ink-soft,#5C6773); margin-top:2px; }
+</style>
 </head>
 <body>
 
@@ -27,6 +107,10 @@
     <li><a href="#setup">환경설정</a></li>
     <li><a href="#faq">FAQ / SOS</a></li>
   </ul>
+  <div class="site-search">
+    <input type="text" id="siteSearchInput" placeholder="내용 검색 (예: 명함, 휴가)" autocomplete="off">
+    <div class="site-search-results" id="siteSearchResults"></div>
+  </div>
   <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
 </div>
 <div class="mobile-menu" id="mobileMenu">
@@ -48,6 +132,30 @@
     <p class="sub">Presented by 인력개발팀</p>
     <div class="tagline">Beyond the Credit, We Connect the Business</div>
     <div class="scroll-cue">SCROLL</div>
+  </div>
+</div>
+
+<!-- 오늘 할 일 요약 위젯 -->
+<div class="today-widget">
+  <div class="tw-card">
+    <div class="tw-head">
+      <span class="tw-badge">TODAY</span>
+      <h3>오늘 첫날, 이 3가지는 꼭 확인하세요</h3>
+    </div>
+    <div class="tw-list">
+      <a class="tw-item" href="#firstday">
+        <span class="tw-num">1</span>
+        <span class="tw-text">근로계약서·서약서·동의서 작성<small>인력개발팀 안내에 따라 진행</small></span>
+      </a>
+      <a class="tw-item" href="#firstday">
+        <span class="tw-num">2</span>
+        <span class="tw-text">출입 등록(안면인식)<small>담당자 사전 연락 필수</small></span>
+      </a>
+      <a class="tw-item" href="#firstday">
+        <span class="tw-num">3</span>
+        <span class="tw-text">초기 인수물품·사규 확인<small>비품·IT인프라 이상 여부 점검</small></span>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -762,5 +870,83 @@
 </div>
 
 <script src="assets/js/main.js"></script>
+<script>
+(function(){
+  /* ===== 추가 기능 1 : 검색 ===== */
+  var searchIndex = [];
+  document.querySelectorAll('section[id]').forEach(function(sec){
+    var secLabelEl = sec.querySelector('.section-title');
+    var secLabel = secLabelEl ? secLabelEl.textContent.trim() : sec.id;
+    var nodes = sec.querySelectorAll('h3.sub-title, .check-card h3, .biz-card h4, .card h4, .faq-q, .sos-card h3, .welfare-tag');
+    nodes.forEach(function(node){
+      var text = node.textContent.trim();
+      if(!text) return;
+      var target = node.closest('.check-card, .biz-card, .card, .faq-item, .sos-card, .welfare-row') || node;
+      searchIndex.push({ title:text, section:secLabel, el:target });
+    });
+  });
+
+  var input = document.getElementById('siteSearchInput');
+  var results = document.getElementById('siteSearchResults');
+
+  function escapeHtml(s){
+    return s.replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; });
+  }
+  function highlight(text, q){
+    var idx = text.toLowerCase().indexOf(q.toLowerCase());
+    if(idx === -1) return escapeHtml(text);
+    return escapeHtml(text.slice(0,idx)) + '<mark>' + escapeHtml(text.slice(idx, idx+q.length)) + '</mark>' + escapeHtml(text.slice(idx+q.length));
+  }
+  function renderResults(q){
+    if(!q){ results.classList.remove('open'); results.innerHTML=''; return; }
+    var matches = searchIndex.filter(function(it){ return it.title.toLowerCase().indexOf(q.toLowerCase()) !== -1; }).slice(0,10);
+    if(matches.length === 0){
+      results.innerHTML = '<div class="ssr-empty">검색 결과가 없습니다.</div>';
+    } else {
+      results.innerHTML = matches.map(function(m, i){
+        return '<a class="ssr-item" href="javascript:void(0)" data-idx="'+i+'"><span class="ssr-sec">'+escapeHtml(m.section)+'</span><span class="ssr-title">'+highlight(m.title, q)+'</span></a>';
+      }).join('');
+      results.querySelectorAll('.ssr-item').forEach(function(a, i){
+        a.addEventListener('click', function(){
+          var el = matches[i].el;
+          el.scrollIntoView({behavior:'smooth', block:'center'});
+          el.classList.add('search-flash');
+          setTimeout(function(){ el.classList.remove('search-flash'); }, 1700);
+          results.classList.remove('open');
+          input.value=''; input.blur();
+        });
+      });
+    }
+    results.classList.add('open');
+  }
+  if(input){
+    input.addEventListener('input', function(){ renderResults(this.value.trim()); });
+    input.addEventListener('focus', function(){ if(this.value.trim()) results.classList.add('open'); });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.site-search')){ results.classList.remove('open'); }
+    });
+  }
+
+  /* ===== 추가 기능 2 : scrollspy ===== */
+  var navLinks = document.querySelectorAll('.topnav ul a, .mobile-menu a');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+  function setActive(id){
+    navLinks.forEach(function(a){
+      var match = a.getAttribute('href') === '#'+id;
+      a.classList.toggle('active', match);
+    });
+  }
+  if('IntersectionObserver' in window && sections.length){
+    var observer = new IntersectionObserver(function(entries){
+      var visible = entries.filter(function(en){ return en.isIntersecting; });
+      if(visible.length > 0){
+        visible.sort(function(a,b){ return b.intersectionRatio - a.intersectionRatio; });
+        setActive(visible[0].target.id);
+      }
+    }, { root:null, rootMargin:'-45% 0px -45% 0px', threshold:[0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(sec){ observer.observe(sec); });
+  }
+})();
+</script>
 </body>
 </html>
